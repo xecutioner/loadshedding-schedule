@@ -15,7 +15,8 @@ class DayFinder
     difference = (today - week_day)
     Date.today - difference
   end
-private
+
+  private
   def invalid_week_day
     puts "invalid week day supplied"
     abort
