@@ -5,10 +5,17 @@ require 'thor'
 require 'downloader'
 require 'schedule'
 require 'schedule_parser'
+require 'group_scheduler'
+require 'schedule_formatter'
+require 'week_day'
 require 'date'
 require 'byebug' #TODO: REMOVE BEFORE PUBLISHING
 require 'httparty' #TODO: REMOVE BEFORE PUBLISHING
 
 
 schedule = Schedule.new
-schedule.schedule_for Date.today
+date = Date.today
+schedule = schedule.schedule_for date, 2
+formattor = ScheduleFormatter.new(schedule, date)
+formattor.format
+puts formattor.formatted_result

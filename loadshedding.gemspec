@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = "Command line utility for checking the loadshedding schedule for Nepal"
   s.authors     = ["Kapil Raj Nakhwa (@xecutioner303)"]
   s.email       = 'kapilnakhwa@gmail.com'
-  s.files       = ['bin/schedule', 'lib/downloader.rb', 'lib/schedule.rb', 'assets/schedule.pdf', 'lib/loadshedding.rb', 'lib/schedule_parser.rb']
+  s.files       = ['bin/schedule', 'lib/downloader.rb', 'lib/schedule.rb', 'assets/schedule.pdf', 'lib/loadshedding.rb', 'lib/schedule_parser.rb', 'lib/group_scheduler.rb', 'lib/week_day.rb']
   s.homepage    =
     'https://github.com/xecutioner/loadshedding-schedule'
   s.license       = 'MIT'

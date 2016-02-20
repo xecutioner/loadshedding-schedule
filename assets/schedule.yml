@@ -1,0 +1,253 @@
+---
+1:
+  Su:
+  - from: '7'
+    to: '14'
+  - from: '17'
+    to: '23'
+  M:
+  - from: '9'
+    to: '17'
+  - from: '20'
+    to: '1'
+  Tu:
+  - from: '8'
+    to: '16'
+  - from: '19'
+    to: '24'
+  W:
+  - from: '5'
+    to: '11'
+  - from: '14'
+    to: '21'
+  Th:
+  - from: '6'
+    to: '13'
+  - from: '16'
+    to: '22'
+  F:
+  - from: '3'
+    to: '8'
+  - from: '11'
+    to: '19'
+  Sa:
+  - from: '4'
+    to: '10'
+  - from: '13'
+    to: '20'
+2:
+  Su:
+  - from: '4'
+    to: '10'
+  - from: '13'
+    to: '20'
+  M:
+  - from: '7'
+    to: '14'
+  - from: '17'
+    to: '23'
+  Tu:
+  - from: '9'
+    to: '17'
+  - from: '20'
+    to: '1'
+  W:
+  - from: '8'
+    to: '16'
+  - from: '19'
+    to: '24'
+  Th:
+  - from: '5'
+    to: '11'
+  - from: '14'
+    to: '21'
+  F:
+  - from: '6'
+    to: '13'
+  - from: '16'
+    to: '22'
+  Sa:
+  - from: '3'
+    to: '8'
+  - from: '11'
+    to: '19'
+3:
+  Su:
+  - from: '3'
+    to: '8'
+  - from: '11'
+    to: '19'
+  M:
+  - from: '4'
+    to: '10'
+  - from: '13'
+    to: '20'
+  Tu:
+  - from: '7'
+    to: '14'
+  - from: '17'
+    to: '23'
+  W:
+  - from: '9'
+    to: '17'
+  - from: '20'
+    to: '1'
+  Th:
+  - from: '8'
+    to: '16'
+  - from: '19'
+    to: '24'
+  F:
+  - from: '5'
+    to: '11'
+  - from: '14'
+    to: '21'
+  Sa:
+  - from: '6'
+    to: '13'
+  - from: '16'
+    to: '22'
+4:
+  Su:
+  - from: '6'
+    to: '13'
+  - from: '16'
+    to: '22'
+  M:
+  - from: '3'
+    to: '8'
+  - from: '11'
+    to: '19'
+  Tu:
+  - from: '4'
+    to: '10'
+  - from: '13'
+    to: '20'
+  W:
+  - from: '7'
+    to: '14'
+  - from: '17'
+    to: '23'
+  Th:
+  - from: '9'
+    to: '17'
+  - from: '20'
+    to: '1'
+  F:
+  - from: '8'
+    to: '16'
+  - from: '19'
+    to: '24'
+  Sa:
+  - from: '5'
+    to: '11'
+  - from: '14'
+    to: '21'
+5:
+  Su:
+  - from: '5'
+    to: '11'
+  - from: '14'
+    to: '21'
+  M:
+  - from: '6'
+    to: '13'
+  - from: '16'
+    to: '22'
+  Tu:
+  - from: '3'
+    to: '8'
+  - from: '11'
+    to: '19'
+  W:
+  - from: '4'
+    to: '10'
+  - from: '13'
+    to: '20'
+  Th:
+  - from: '7'
+    to: '14'
+  - from: '17'
+    to: '23'
+  F:
+  - from: '9'
+    to: '17'
+  - from: '20'
+    to: '1'
+  Sa:
+  - from: '8'
+    to: '16'
+  - from: '19'
+    to: '24'
+6:
+  Su:
+  - from: '8'
+    to: '16'
+  - from: '19'
+    to: '24'
+  M:
+  - from: '5'
+    to: '11'
+  - from: '14'
+    to: '21'
+  Tu:
+  - from: '6'
+    to: '13'
+  - from: '16'
+    to: '22'
+  W:
+  - from: '3'
+    to: '8'
+  - from: '11'
+    to: '19'
+  Th:
+  - from: '4'
+    to: '10'
+  - from: '13'
+    to: '20'
+  F:
+  - from: '7'
+    to: '14'
+  - from: '17'
+    to: '23'
+  Sa:
+  - from: '9'
+    to: '17'
+  - from: '20'
+    to: '1'
+7:
+  Su:
+  - from: '9'
+    to: '17'
+  - from: '20'
+    to: '1'
+  M:
+  - from: '8'
+    to: '16'
+  - from: '19'
+    to: '24'
+  Tu:
+  - from: '5'
+    to: '11'
+  - from: '14'
+    to: '21'
+  W:
+  - from: '6'
+    to: '13'
+  - from: '16'
+    to: '22'
+  Th:
+  - from: '3'
+    to: '8'
+  - from: '11'
+    to: '19'
+  F:
+  - from: '4'
+    to: '10'
+  - from: '13'
+    to: '20'
+  Sa:
+  - from: '7'
+    to: '14'
+  - from: '17'
+    to: '23'
