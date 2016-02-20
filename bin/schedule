@@ -1,21 +1,40 @@
 #!/usr/bin/env ruby
 $LOAD_PATH.unshift File.dirname(__FILE__) + '/../lib'
 
-require 'thor'
 require 'downloader'
 require 'schedule'
 require 'schedule_parser'
 require 'group_scheduler'
 require 'schedule_formatter'
 require 'week_day'
+require 'config_loader'
 require 'date'
 require 'byebug' #TODO: REMOVE BEFORE PUBLISHING
-require 'httparty' #TODO: REMOVE BEFORE PUBLISHING
+require 'httparty'
+require 'optparse'
+require 'ostruct'
+require 'interfacer'
+require 'day_finder'
 
+options = OpenStruct.new
+option_parser = OptionParser.new do |opt|
+  opt.on('-g', '--group group_number', 'The group number') { |o| options.group = o }
+  opt.on('-w', '--week_day Weekday ', 'The day number in work week 1 being monday') { |o| options.week_day = o }
+  opt.on('-c', '--configure', 'Set the day number as default in work week 1 being monday') { |o| options.set_group = true }
+end
+
+option_parser.parse!
+
+
+day_finder = DayFinder.new
+date = day_finder.find_week_day(options.week_day.to_i)
+ConfigLoader.set_group if options.set_group
+group = options.group || ConfigLoader.load_group
 
 schedule = Schedule.new
-date = Date.today
-schedule = schedule.schedule_for date, 2
-formattor = ScheduleFormatter.new(schedule, date)
+schedule = schedule.schedule_for date, group
+
+formattor = ScheduleFormatter.new(schedule, date, group)
 formattor.format
 puts formattor.formatted_result
+

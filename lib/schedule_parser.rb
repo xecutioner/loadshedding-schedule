@@ -12,6 +12,7 @@ class ScheduleParser
   end
 
   def group_schedule(group)
+    group = group.to_i
     result_hash[group]
   end
 
