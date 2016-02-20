@@ -8,17 +8,20 @@ class Downloader
 
   def initialize(download_path=nil)
    @path ||= download_path || DOWNLOAD_PATH
+   @schedule_json = Hash.new
   end
 
   def download
     (1..7).each do |group|
-      download_for_group(group)
+     @schedule_json.merge!({group.to_s => download_for_group(group)})
     end
   end
 
+private
 
   def download_for_group group
-    puts group
-   # HTTParty.get(DOWNLOAD_PATH, verify: false ,query: {format: :json, group: group}, headers: {HEADER => API_KEY})
+   result = HTTParty.get(DOWNLOAD_PATH, verify: false ,query: {format: :json, group: group}, headers: {HEADER => API_KEY})
+   parsed_data = JSON.parse(result.parsed_response)
+   parsed_data["schedule"]
   end
 end

@@ -10,12 +10,13 @@ class ScheduleParser
     confirm_file
   end
 
-  private
+ private
 
   def confirm_file
    unless  File.exists?(schedule_yaml)
     d = Downloader.new
     d.download
+    result_hash = d.schedule_json
    end
   end
 end
