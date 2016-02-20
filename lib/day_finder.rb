@@ -18,7 +18,7 @@ class DayFinder
 
   private
   def invalid_week_day
-    puts "invalid week day supplied"
+    puts "invalid week day supplied".colorize(:yellow).colorize(:background => :red)
     abort
   end
 end

@@ -25,7 +25,7 @@ class GroupSchedule
   end
 
   def invalid_group
-    puts "Invalid group number supplied"
+    puts "Invalid group number supplied".colorize(:yellow).colorize(:background => :red)
     abort
   end
 end
