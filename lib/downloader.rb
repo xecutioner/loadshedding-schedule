@@ -3,7 +3,7 @@ class Downloader
   DOWNLOAD_PATH = 'https://acpmasquerade-nepal-loadshedding-schedule-by-sparrow-sms.p.mashape.com/schedule.php'
   API_KEY = '8ibMI63bqPmshv9aq5XoZtwTDNxBp11nUMNjsnVVa3A88wMy1E'
   HEADER = 'X-Mashape-Key'
-  INSTALL_PATH = File.expand_path('assets/schedule.yml')
+  INSTALL_PATH = File.expand_path('~/.schedule.yml')
   attr_reader :path, :schedule_json
 
   def initialize(download_path=nil)
