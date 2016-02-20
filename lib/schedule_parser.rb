@@ -33,10 +33,17 @@ class ScheduleParser
 
   def parse_from_file(schedule_yaml)
     @result_hash = YAML.load(File.read(schedule_yaml))
+    needs_update?
+  end
+
+  def needs_update?
+    date = @result_hash['date']
+    download  if (Date.today - date).to_i > 7
   end
 
   def store_to_file
    File.open(schedule_yaml, 'w') do |f|
+     result_hash.merge!({'date' => Date.today})
     f.write(result_hash.to_yaml)
    end
   end
