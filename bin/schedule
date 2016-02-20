@@ -1,2 +1,14 @@
 #!/usr/bin/env ruby
-puts "hello world"
+$LOAD_PATH.unshift File.dirname(__FILE__) + '/../lib'
+
+require 'thor'
+require 'downloader'
+require 'schedule'
+require 'schedule_parser'
+require 'date'
+require 'byebug' #TODO: REMOVE BEFORE PUBLISHING
+require 'httparty' #TODO: REMOVE BEFORE PUBLISHING
+
+
+schedule = Schedule.new
+schedule.schedule_for Date.today

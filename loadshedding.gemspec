@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = "Command line utility for checking the loadshedding schedule for Nepal"
   s.authors     = ["Kapil Raj Nakhwa (@xecutioner303)"]
   s.email       = 'kapilnakhwa@gmail.com'
-  s.files       = ['bin/schedule', 'lib/downloader.rb', 'lib/schedule.rb', 'assets/schedule.pdf', 'lib/loadshedding.rb']
+  s.files       = ['bin/schedule', 'lib/downloader.rb', 'lib/schedule.rb', 'assets/schedule.pdf', 'lib/loadshedding.rb', 'lib/schedule_parser.rb']
   s.homepage    =
     'https://github.com/xecutioner/loadshedding-schedule'
   s.license       = 'MIT'
@@ -14,6 +14,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'thor', '~> 0.19.1'
   s.add_runtime_dependency 'highline', '~> 1.7', '>= 1.7.2'
   s.add_runtime_dependency 'colorize', '~> 0.7.7'
+  s.add_runtime_dependency 'httparty'
   s.post_install_message = "type schedule to get started"
 end
 
