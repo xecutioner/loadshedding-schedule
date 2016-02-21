@@ -13,6 +13,7 @@ class Downloader
 
   def download
     (1..7).each do |group|
+      puts "Downloading latest schedule for group #{group}".colorize(:green)
       group_schedule = download_for_group(group)
       @schedule_json.merge!({group => group_schedule})
     end
