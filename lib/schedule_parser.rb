@@ -16,6 +16,11 @@ class ScheduleParser
     result_hash[group]
   end
 
+  def download!
+    download
+    store_to_file
+  end
+
  private
 
   def confirm_file

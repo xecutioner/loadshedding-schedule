@@ -20,10 +20,12 @@ option_parser = OptionParser.new do |opt|
   opt.on('-g', '--group group_number', 'The group number') { |o| options.group = o }
   opt.on('-w', '--week_day Weekday ', 'The day number in work week 1 being monday') { |o| options.week_day = o }
   opt.on('-c', '--configure', 'Set the day number as default in work week 1 being monday') { |o| options.set_group = true }
+  opt.on('-u', '--update', 'Update the schedule manually') { |o| options.update = true }
 end
 
 option_parser.parse!
 
+ScheduleParser.new.download! if options.update
 
 day_finder = DayFinder.new
 date = day_finder.find_week_day(options.week_day.to_i)
