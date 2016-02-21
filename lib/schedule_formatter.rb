@@ -1,5 +1,5 @@
 class ScheduleFormatter
-  attr_reader :formatted_result
+  attr_reader :formatted_result, :color
 
   def initialize unformatted_hash, date, group
     @unformatted_hash = unformatted_hash
@@ -7,10 +7,12 @@ class ScheduleFormatter
     @formatted_result
     @group = group
     @current_status = set_timer
+    @color = set_color
   end
 
   def format
     @formatted_result = <<-EOS
+
       Load Shedding Schedule for #{@date} : #{@date.strftime('%A')}
       Group Number : #{@group}
       Morning : #{@unformatted_hash.first}
@@ -20,6 +22,9 @@ class ScheduleFormatter
   end
 
   private
+  def set_color
+    @current_status.status == "Off" ? :red : :green
+  end
 
   def set_timer
     morning_hours_range = range_from_array @unformatted_hash.first.values.map(&:to_i)

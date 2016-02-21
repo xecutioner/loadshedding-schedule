@@ -37,5 +37,5 @@ schedule = schedule.schedule_for date, group
 
 formattor = ScheduleFormatter.new(schedule, date, group)
 formattor.format
-puts formattor.formatted_result.colorize(:blue)
+puts formattor.formatted_result.colorize(formattor.color)
 
