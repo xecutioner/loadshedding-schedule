@@ -6,7 +6,7 @@ class Interfacer
   end
 
   def find_group
-   @cli_handler.ask "Please enter your group number."
+   @cli_handler.ask "Please enter your group number(will be set as default).".colorize(:red)
   end
 
   def persist(group, file)
