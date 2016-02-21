@@ -1,5 +1,5 @@
 ## Loadshedding
-# Command line tool for Loadshedding schedule of Nepal .
+### Command line tool for Loadshedding schedule of Nepal .
 
 Ruby gem to add a command line utility `schedule` which displays the uptodate schedule for the Loadshedding. You can set your default group or pass in group and day as a parameter.
 
@@ -7,6 +7,10 @@ Ruby gem to add a command line utility `schedule` which displays the uptodate sc
 * set default group
 * change group any time
 * see loadshedding schedule for any group or any day
+
+### Installation
+
+    gem install loadshedding
 
 ###Usage
 Some usage examples
