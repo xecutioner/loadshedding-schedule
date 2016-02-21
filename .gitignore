@@ -3,3 +3,4 @@
 .byebug_history
 assets/.DS_Store
 *.gem
+*.swo
