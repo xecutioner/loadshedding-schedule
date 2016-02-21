@@ -2,3 +2,4 @@
 .DS_Store
 .byebug_history
 assets/.DS_Store
+*.gem

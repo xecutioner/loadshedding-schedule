@@ -7,7 +7,6 @@ require 'group_scheduler'
 require 'schedule_formatter'
 require 'week_day'
 require 'config_loader'
-require 'byebug' #TODO: REMOVE BEFORE PUBLISHING
 require 'httparty'
 require 'optparse'
 require 'ostruct'
