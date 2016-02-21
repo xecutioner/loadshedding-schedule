@@ -15,13 +15,18 @@ class ScheduleFormatter
 
       Load Shedding Schedule for #{@date} : #{@date.strftime('%A')}
       Group Number : #{@group}
-      Morning : #{@unformatted_hash.first}
-      Evening : #{@unformatted_hash.last}
+      Morning : #{format_time @unformatted_hash.first}
+      Evening : #{format_time @unformatted_hash.last}
       Currently: #{@current_status.status} : #{@current_status.alt_status} in #{@current_status.time_to_change}
       EOS
   end
 
   private
+
+  def format_time(time)
+    "From : #{time.values.first} => To : #{time.values.last}"
+  end
+
   def set_color
     @current_status.status == "Off" ? :red : :green
   end
