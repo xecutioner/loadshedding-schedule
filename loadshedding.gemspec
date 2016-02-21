@@ -1,3 +1,4 @@
+$:.push File.expand_path("../lib", __FILE__)
 Gem::Specification.new do |s|
   s.name        = 'loadshedding'
   s.version     = '0.1.0'
