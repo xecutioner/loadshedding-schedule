@@ -2,7 +2,12 @@ require 'time_diff'
 
 class Timer
  attr_reader :status, :alt_status, :time_to_change
-  def initialize(morning_range, evening_range)
+
+ # Gives back a timer object
+ # @param morning_range Range object having from and to hours
+ # @param evening_range Range object having from and to hours
+
+ def initialize(morning_range, evening_range)
     @morning_range = morning_range
     @evening_range = evening_range
     @current_time = Time.now

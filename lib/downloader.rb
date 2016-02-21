@@ -11,6 +11,7 @@ class Downloader
     @schedule_json = Hash.new
   end
 
+  # Download the schedule form masquerade API
   def download
       puts "Downloading latest schedule".colorize(:green)
     (1..7).each do |group|
