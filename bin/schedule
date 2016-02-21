@@ -25,7 +25,7 @@ end
 
 option_parser.parse!
 
-ScheduleParser.new.download! if options.update
+ScheduleParser.new(Downloader::INSTALL_PATH).download! if options.update
 
 day_finder = DayFinder.new
 date = day_finder.find_week_day(options.week_day.to_i)
