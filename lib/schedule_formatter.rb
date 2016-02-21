@@ -6,6 +6,7 @@ class ScheduleFormatter
     @date = find_date(date)
     @formatted_result
     @group = group
+    @current_status = set_timer
   end
 
   def format
@@ -14,7 +15,20 @@ class ScheduleFormatter
       Group Number : #{@group}
       Morning : #{@unformatted_hash.first}
       Evening : #{@unformatted_hash.last}
-    EOS
+      Currently: #{@current_status.status} : #{@current_status.alt_status} in #{@current_status.time_to_change}
+      EOS
+  end
+
+  private
+
+  def set_timer
+    morning_hours_range = range_from_array @unformatted_hash.first.values.map(&:to_i)
+    evening_hours_range = range_from_array @unformatted_hash.last.values.map(&:to_i)
+    Timer.new(morning_hours_range, evening_hours_range)
+  end
+
+  def range_from_array(array)
+    Range.new(array.first, array.last)
   end
 
   def find_date(date)

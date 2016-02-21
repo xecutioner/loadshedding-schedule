@@ -15,6 +15,7 @@ require 'ostruct'
 require 'interfacer'
 require 'day_finder'
 require 'colorize'
+require 'timer'
 
 options = OpenStruct.new
 option_parser = OptionParser.new do |opt|
@@ -36,5 +37,5 @@ schedule = schedule.schedule_for date, group
 
 formattor = ScheduleFormatter.new(schedule, date, group)
 formattor.format
-puts formattor.formatted_result
+puts formattor.formatted_result.colorize(:blue)
 
