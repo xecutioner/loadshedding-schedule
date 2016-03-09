@@ -43,7 +43,7 @@ class ScheduleParser
 
   def needs_update?
     date = @result_hash['date']
-    download  if (Date.today - date).to_i > 7
+    download && store_to_file  if (Date.today - date).to_i > 7
   end
 
   def store_to_file
