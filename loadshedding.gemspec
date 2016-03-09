@@ -1,7 +1,7 @@
 $:.push File.expand_path("../lib", __FILE__)
 Gem::Specification.new do |s|
   s.name        = 'loadshedding'
-  s.version     = '0.1.6'
+  s.version     = '0.1.7'
   s.date        = '2016-02-16'
   s.summary     = "Command line utility for loadshedding schedule"
   s.description = "Command line utility for checking the loadshedding schedule for Nepal"
