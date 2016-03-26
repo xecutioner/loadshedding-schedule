@@ -1,23 +1,20 @@
 require 'time_diff'
 
 class Timer
- attr_reader :status, :alt_status, :time_to_change
+  attr_reader :status, :alt_status, :time_to_change
 
- # Gives back a timer object
- # @param morning_range Range object having from and to hours
- # @param evening_range Range object having from and to hours
+  # Gives back a timer object
+  # @param morning_range Range object having from and to hours
+  # @param evening_range Range object having from and to hours
 
- def initialize(morning_range, evening_range)
+  def initialize(morning_range, evening_range, current_time= Time.now)
     @morning_range = morning_range
     @evening_range = evening_range
-    @current_time = Time.now
+    @current_time = current_time
     @time_to_change = find_remaining_time
     @status = find_status
     @alt_status = alternate_status
   end
-
-
-
 
   private
 
@@ -35,12 +32,14 @@ class Timer
 
 
   def find_remaining_time
-    if currently_off?
-      time = time_to_on
-    else
-      time = time_to_off
-    end
-    " #{time[:hour]} hour : #{time[:minute]} minutes "
+      if currently_off?
+        time = time_to_on
+      else
+        time = time_to_off
+      end
+      time.nil? ?  "No loadshedding for rest of today" : " #{time[:hour]} hour : #{time[:minute]} minutes "
+
+
   end
 
   def time_to_on
@@ -55,6 +54,7 @@ class Timer
   def time_to_off
     upcoming_hours = [@morning_range.first, @morning_range.last, @evening_range.first, @evening_range.last].delete_if{|a| a < @current_time.hour}
     closest_hour = upcoming_hours.min_by {|x| (x - @current_time.hour)}
+    return nil if closest_hour.nil?
     t = change_to_time(closest_hour)
     diff = time_difference(t)
   end

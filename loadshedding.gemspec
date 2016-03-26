@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'colorize', '~> 0.7.7'
   s.add_runtime_dependency 'httparty' , '~>0.13.7'
   s.add_runtime_dependency 'time_diff' , '~> 0.3.0'
+  s.add_development_dependency 'pry'
   s.post_install_message = "\nType schedule -h to get started\n\n"
 end
 
