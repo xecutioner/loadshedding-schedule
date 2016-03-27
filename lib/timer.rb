@@ -37,7 +37,7 @@ class Timer
       else
         time = time_to_off
       end
-      time.nil? ?  "No loadshedding for rest of today" : " #{time[:hour]} hour : #{time[:minute]} minutes "
+      time.nil? ?  "00 : No loadshedding for rest of today" : " #{time[:hour]} hour : #{time[:minute]} minutes "
 
 
   end
